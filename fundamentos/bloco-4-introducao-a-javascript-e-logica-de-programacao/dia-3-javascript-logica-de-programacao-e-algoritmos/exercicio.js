@@ -1,7 +1,10 @@
-let numeroInicial = 10;
-let resultado = numeroInicial;
-for (let index = numeroInicial; index > 1; index -= 1) {
-    numeroInicial -= 1;
-    resultado = resultado * numeroInicial;
-    console.log (resultado);
+let word = 'tryber';
+let inverseWord = [];
+let back = word.length - 1;
+
+for (let foward = 0; foward < word.length; foward += 1) {
+    inverseWord[foward] = word[back];
+    back -= 1;
 }
+inverseWord = inverseWord.join("");
+console.log (inverseWord);
