@@ -1,10 +1,15 @@
-let word = 'tryber';
-let inverseWord = [];
-let back = word.length - 1;
+let array = ['java', 'javascript', 'python', 'html', 'css'];
+let biggerWord = array[0];
+let smallerWord = array[0];
 
-for (let foward = 0; foward < word.length; foward += 1) {
-    inverseWord[foward] = word[back];
-    back -= 1;
+for (index = 0; index < array.length - 1; index += 1) {
+    let comparator = array[index + 1];
+    if (comparator.length > biggerWord.length) {
+        biggerWord = comparator;
+    }
+    if (comparator.length < smallerWord.length) {
+        smallerWord = comparator;
+    }
 }
-inverseWord = inverseWord.join("");
-console.log (inverseWord);
+console.log ("a maior palavra é: ", biggerWord);
+console.log ("a menor palavra é: ", smallerWord);
