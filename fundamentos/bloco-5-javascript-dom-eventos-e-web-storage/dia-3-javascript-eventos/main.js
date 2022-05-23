@@ -44,6 +44,12 @@ function redirectPage (event) {
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
+thirdLi.addEventListener('mouseover', changeColor);
+
+function changeColor(event) {
+  thirdLi.style.backgroundColor = '#' + Math.floor(Math.random() * 0x1000000).toString(16).padStart(6, '0');
+}
+
 // Segue abaixo um exemplo do uso de event.target:
 
 
