@@ -35,6 +35,12 @@ input.addEventListener('keyup', changeText)
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
 
+thirdLi.addEventListener('dblclick', redirectPage)
+
+function redirectPage (event) {
+  window.location.href = "https://marceloferreiratrybe23b.github.io/";
+}
+
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
 
