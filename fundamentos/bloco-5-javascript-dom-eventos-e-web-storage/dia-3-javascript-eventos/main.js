@@ -26,6 +26,11 @@ function whenLiIsClicked(evento) {
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
+function changeText(evento) {
+  let techBox = document.querySelector('.tech');
+  techBox.innerText = input.value;
+}
+input.addEventListener('keyup', changeText)
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
