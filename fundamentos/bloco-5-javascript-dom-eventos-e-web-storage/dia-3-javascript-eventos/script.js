@@ -25,3 +25,12 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
   if (dezDaysList[i] === 4 || dezDaysList[i] === 11 || dezDaysList[i] === 18 || dezDaysList[i] === 25) daycreated.classList.add('friday');
   document.querySelector('#days').appendChild(daycreated);
 }
+
+function createHolidaysBtn(feriados) {
+  let newBtn = document.createElement('button');
+  newBtn.innerText = feriados;
+  newBtn.className = 'btn-holiday';
+  document.querySelector('.buttons-container').appendChild(newBtn);
+}
+
+createHolidaysBtn('Feriados');
