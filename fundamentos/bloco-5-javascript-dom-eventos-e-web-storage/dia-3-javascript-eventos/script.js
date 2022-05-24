@@ -26,11 +26,23 @@ for (let i = 0; i < dezDaysList.length; i += 1) {
   document.querySelector('#days').appendChild(daycreated);
 }
 
+let holidayBtn = document.createElement('button');
+
 function createHolidaysBtn(feriados) {
-  let newBtn = document.createElement('button');
-  newBtn.innerText = feriados;
-  newBtn.className = 'btn-holiday';
-  document.querySelector('.buttons-container').appendChild(newBtn);
+  holidayBtn.innerText = feriados;
+  holidayBtn.className = 'btn-holiday';
+  document.querySelector('.buttons-container').appendChild(holidayBtn);
 }
 
 createHolidaysBtn('Feriados');
+
+function changeHolidaysColor() {
+  let holiday1 = document.querySelector('.holiday');
+  for (let i = 0; i < document.querySelectorAll('.holiday'); i += 1) {
+    if (holiday1.style.backGroundColor === "rgb(238,238,238)") {
+      document.querySelectorAll('.holiday')[i].style.backGroundColor = 'green';
+    } else document.querySelectorAll('.holiday')[i].style.backGroundColor === "rgb(238,238,238)"
+  }
+}
+
+holidayBtn.addEventListener('click', changeHolidaysColor);
