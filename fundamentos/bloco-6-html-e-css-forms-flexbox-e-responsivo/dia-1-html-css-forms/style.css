@@ -1,0 +1,17 @@
+main {
+  border: 1px solid black;
+}
+
+.line-form {
+  margin: 10px;
+}
+
+.line-form input {
+  height: 12px;
+}
+
+textarea {
+  resize: none;
+  width: 50%;
+  margin-right: 100%;
+}
