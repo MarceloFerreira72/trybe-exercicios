@@ -55,3 +55,16 @@ const fatorialCursivo = (number) => {
 };
 
 // console.log(fatorialCursivo(5));
+
+
+// Parte II - questão 2
+
+const longestWord = (frase) => {
+  const words = frase.split(' ');
+  let biggestWord = words.reduce(function(a,b) {
+    return a.length > b.length ? a : b ;
+  },);
+  return biggestWord;
+}
+
+// console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
