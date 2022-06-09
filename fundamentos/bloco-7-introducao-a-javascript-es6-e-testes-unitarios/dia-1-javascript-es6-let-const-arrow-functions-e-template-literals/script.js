@@ -68,3 +68,24 @@ const longestWord = (frase) => {
 }
 
 // console.log(longestWord('Antônio foi no banheiro e não sabemos o que aconteceu'));
+
+
+// Parte II - questão 3
+
+const clickImg = document.querySelector('.main-image');
+const counter = document.querySelector('.counter');
+
+function shortImage() {
+  clickImg.style.width = '19%'
+  clickImg.style.margin = '0.75%'
+  let ident = parseInt(counter.innerHTML) + 1;
+  counter.innerHTML = ident;
+}
+
+function bigImage() {
+  clickImg.style.width = '20%'
+  clickImg.style.margin = ''
+}
+
+clickImg.addEventListener('mousedown', shortImage)
+clickImg.addEventListener('mouseup', bigImage)
