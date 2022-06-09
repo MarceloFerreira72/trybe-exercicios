@@ -78,8 +78,8 @@ const counter = document.querySelector('.counter');
 function shortImage() {
   clickImg.style.width = '19%'
   clickImg.style.margin = '0.75%'
-  let ident = parseInt(counter.innerHTML) + 1;
-  counter.innerHTML = ident;
+  let clickCount = parseInt(counter.innerHTML) + 1;
+  counter.innerHTML = clickCount;
 }
 
 function bigImage() {
