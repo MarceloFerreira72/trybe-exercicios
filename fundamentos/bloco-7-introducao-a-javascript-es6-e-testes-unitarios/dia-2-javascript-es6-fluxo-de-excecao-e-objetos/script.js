@@ -1,5 +1,6 @@
 const verifyNumbers = (num1, num2) => {
-  if (num1 === '' || num2 === '') throw new Error ('insira ambos os números')
+  if (num1 === '' || num2 === '') throw new Error ('insira ambos os números');
+  if (isNaN(num1) || isNaN(num2)) throw new Error ('insira apenas números');
 }
 
 function sum() {
@@ -9,10 +10,11 @@ function sum() {
     const result = parseInt(value1) + parseInt(value2);
     verifyNumbers(value1, value2);
     document.getElementById('result').innerHTML = `Resultado: ${result}`;
-    document.getElementById('value1').value = '';
-    document.getElementById('value2').value = '';
   } catch (error) {
     result.innerText = `Erro: ${error.message}`;
+  } finally {
+    document.getElementById('value1').value = '';
+    document.getElementById('value2').value = '';
   }
 }
 window.onload = () => {
