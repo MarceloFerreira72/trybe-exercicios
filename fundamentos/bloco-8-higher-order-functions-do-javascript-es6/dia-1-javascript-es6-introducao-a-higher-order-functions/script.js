@@ -30,4 +30,28 @@ const resultadoSorteio = (numberoApostado, callback) => {
   return callback(numberoApostado, numeroSorteio);
 }
 
-console.log(resultadoSorteio(2, ehIgual));
+// console.log(resultadoSorteio(2, ehIgual));
+
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const checarNota = (gabarito, respostasEstudante) => {
+  nota = 0;
+  for (let i = 0; i < gabarito.length; i += 1) {
+    if (respostasEstudante[i] === 'N.A') nota = nota;
+    else {
+      if (gabarito[i] === respostasEstudante[i]) nota += 1;
+      else {
+        nota -= 0.5;
+      }
+    }
+  }
+  return nota;
+}
+
+const pontuação = (gabarito, respostasEstudante, callback) => {
+  const notaFinal = callback(gabarito, respostasEstudante);
+  return notaFinal;
+}
+
+console.log(pontuação(RIGHT_ANSWERS, STUDENT_ANSWERS, checarNota));
