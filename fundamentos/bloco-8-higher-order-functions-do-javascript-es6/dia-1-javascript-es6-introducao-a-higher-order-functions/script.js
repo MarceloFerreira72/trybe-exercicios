@@ -15,4 +15,19 @@ const newEmployees = (callback) => {
   return employees;
 };
 
-console.table(Object.values(newEmployees(infosEmployee)));
+// console.table(Object.values(newEmployees(infosEmployee)));
+
+
+////////////////////////////////////////////////////////////////////
+
+const ehIgual = (aposta, sorteio) => {
+  if (aposta === sorteio) return 'Parabéns você ganhou';
+  return 'Tente novamente';
+}
+
+const resultadoSorteio = (numberoApostado, callback) => {
+  const numeroSorteio = Math.floor((Math.random() * 5) + 1);
+  return callback(numberoApostado, numeroSorteio);
+}
+
+console.log(resultadoSorteio(2, ehIgual));
